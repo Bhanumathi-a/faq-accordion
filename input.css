@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/WorkSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-Regular.woff2') format('woff2'),
+        url('../fonts/WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-Bold.woff2') format('woff2'),
+        url('../fonts/WorkSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@layer base {
+    body {
+        font-family: 'Work Sans';
+        background: url("../images/background-pattern-desktop.svg") repeat-x center top;
+        height: 100vh;
+        font-weight: normal;
+        font-size: 16px;
+    }
+}
+
+@layer components {
+    .faq-header {
+        @apply cursor-pointer
+    }
+
+    .faq-body {
+        @apply transition-all duration-1000 ease-in hidden
+    }
+
+    .title {
+        font-family: 'Work Sans';
+        font-weight: bold;
+    }
+
+    .faq-header .icon {
+        background: url("/assets/images/icon-plus.svg") no-repeat center center;
+        height: 30px;
+        width: 30px;
+        /* display: inline-block; */
+        @apply inline-block rounded-full absolute right-0 top-2
+    }
+
+    .faq-header.active .icon {
+        background: url("/assets/images/icon-minus.svg") no-repeat center center;
+    }
+
+    .attribution a {
+        text-decoration: underline;
+    }
+}
